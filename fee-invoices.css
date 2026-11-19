@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+}
+
+.container {
+    width: 92%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+header {
+    background: #1e3a8a;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 16px;
+}
+
+main {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+}
+
+h2 {
+    color: #1e3a8a;
+    margin: 15px 0 20px;
+}
+
+.invoice-form {
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.invoice-form label {
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.invoice-form input,
+.invoice-form select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.invoice-form input:focus,
+.invoice-form select:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 13px 18px;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 12px;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+button:disabled {
+    background: #94a3b8;
+    cursor: not-allowed;
+}
+
+#message {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 700px;
+}
+
+th,
+td {
+    padding: 13px;
+    border: 1px solid #e2e8f0;
+    text-align: left;
+}
+
+th {
+    background: #1e3a8a;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 96%;
+        margin: 12px auto;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+}

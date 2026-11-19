@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Notices - AIMS</title>
+    <link rel="stylesheet" href="student-notices.css">
+</head>
+<body>
+
+    <header class="header">
+        <img src="logo.jpg" alt="AIMS Logo">
+        <h2>Alpha International Mission School</h2>
+        <p>Student & Parent Portal</p>
+    </header>
+
+    <main class="container">
+        <a href="student-dashboard.html" class="back-link">
+            ← Back to Dashboard
+        </a>
+
+        <h1>School Notices</h1>
+        <p class="subtitle">Latest school announcements and updates</p>
+
+        <div id="noticeContainer">
+            <p class="loading">Loading notices...</p>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="student-notices.js"></script>
+</body>
+</html>

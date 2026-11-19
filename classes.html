@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIMS - Class Management</title>
+    <link rel="stylesheet" href="classes.css">
+</head>
+<body>
+
+    <header class="topbar">
+        <div>
+            <h1>AIMS School ERP</h1>
+            <p>Class & Section Management</p>
+        </div>
+        <a href="dashboard.html">Back to Dashboard</a>
+    </header>
+
+    <main class="container">
+        <section class="page-heading">
+            <h2>Class Management</h2>
+            <p>Add and manage school classes and sections.</p>
+        </section>
+
+        <section class="form-card">
+            <h2>Add New Class</h2>
+
+            <form id="classForm">
+                <label for="className">Class Name</label>
+                <input type="text" id="className"
+                    placeholder="Example: Nursery, Class 1" required>
+
+                <button type="submit" id="saveClassBtn">Save Class</button>
+                <p id="formMessage"></p>
+            </form>
+        </section>
+
+        <section class="form-card">
+            <h2>Add New Section</h2>
+
+            <form id="sectionForm">
+                <label for="sectionClass">Select Class</label>
+                <select id="sectionClass" required>
+                    <option value="">Select Class</option>
+                </select>
+
+                <label for="sectionName">Section Name</label>
+                <input type="text" id="sectionName"
+                    placeholder="Example: A, B, C" required>
+
+                <button type="submit">Save Section</button>
+                <p id="sectionMessage"></p>
+            </form>
+        </section>
+
+        <section class="table-card">
+            <h2>Class Records</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Class Name</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="classTableBody">
+                    <tr><td colspan="3">Loading...</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="table-card">
+            <h2>Section Records</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Class</th>
+                        <th>Section</th>
+                    </tr>
+                </thead>
+                <tbody id="sectionTableBody">
+                    <tr><td colspan="3">Loading...</td></tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="classes.js"></script>
+</body>
+</html>

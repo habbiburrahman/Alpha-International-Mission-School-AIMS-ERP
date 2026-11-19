@@ -1,0 +1,300 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+}
+
+.header {
+    background: #173b7a;
+    color: white;
+    padding: 20px 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.header h1 {
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.header p {
+    color: #dbeafe;
+    font-size: 14px;
+}
+
+.back-btn {
+    background: white;
+    color: #173b7a;
+    text-decoration: none;
+    padding: 11px 18px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px;
+}
+
+.page-heading {
+    margin-bottom: 25px;
+}
+
+.page-heading h2 {
+    color: #173b7a;
+    font-size: 27px;
+    margin-bottom: 8px;
+}
+
+.page-heading p {
+    color: #64748b;
+}
+
+.filter-section {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+}
+
+.filter-section h2 {
+    color: #173b7a;
+    margin-bottom: 20px;
+}
+
+.filter-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.form-group select {
+    padding: 13px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    font-size: 15px;
+    background: white;
+}
+
+#generateReport,
+#reportCard button {
+    margin-top: 20px;
+    padding: 13px 22px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#generateReport:hover,
+#reportCard button:hover {
+    background: #1d4ed8;
+}
+
+#message {
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+.report-card {
+    background: white;
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+}
+
+.school-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.school-heading h1 {
+    color: #173b7a;
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.school-heading p {
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.school-heading hr {
+    margin-top: 18px;
+    border: 1px solid #173b7a;
+}
+
+.student-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.student-details div {
+    padding: 12px;
+    background: #f8fafc;
+    border-radius: 5px;
+}
+
+.student-details strong {
+    margin-right: 5px;
+}
+
+.marks-heading {
+    color: #173b7a;
+    margin-bottom: 15px;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 650px;
+}
+
+thead {
+    background: #eff6ff;
+    color: #173b7a;
+}
+
+th,
+td {
+    padding: 14px;
+    border: 1px solid #cbd5e1;
+    text-align: center;
+}
+
+.result-summary {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.result-summary div {
+    background: #eff6ff;
+    padding: 18px;
+    border-radius: 7px;
+    text-align: center;
+}
+
+.result-summary span {
+    display: block;
+    color: #64748b;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.result-summary strong {
+    font-size: 21px;
+    color: #173b7a;
+}
+
+.signature-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 65px;
+    gap: 30px;
+}
+
+.signature-section div {
+    width: 220px;
+    border-top: 1px solid #1e293b;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.print-section {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .filter-grid,
+    .student-details {
+        grid-template-columns: 1fr;
+    }
+
+    .result-summary {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .report-card {
+        padding: 18px;
+    }
+
+    .school-heading h1 {
+        font-size: 20px;
+    }
+}
+
+@media print {
+    body {
+        background: white;
+    }
+
+    .header,
+    .page-heading,
+    .filter-section,
+    .print-section {
+        display: none !important;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .report-card {
+        display: block !important;
+        box-shadow: none;
+        border-radius: 0;
+        padding: 15px;
+    }
+
+    .result-summary div {
+        background: white;
+        border: 1px solid #ccc;
+    }
+
+    .signature-section {
+        margin-top: 70px;
+    }
+}

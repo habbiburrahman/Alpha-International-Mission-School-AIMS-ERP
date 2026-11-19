@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIMS - Fee Payment Reports</title>
+    <link rel="stylesheet" href="payment-reports.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header class="page-header">
+            <div>
+                <h1>AIMS ERP</h1>
+                <h2>Fee Payment Reports</h2>
+                <p>View and monitor school fee collections</p>
+            </div>
+
+            <a href="dashboard.html" class="back-btn">
+                ← Back to Dashboard
+            </a>
+        </header>
+
+        <section class="summary-cards">
+
+            <div class="summary-card">
+                <h3>Total Fee Collection</h3>
+                <p id="totalCollection">₹0</p>
+            </div>
+
+            <div class="summary-card">
+                <h3>Today's Collection</h3>
+                <p id="todayCollection">₹0</p>
+            </div>
+
+            <div class="summary-card">
+                <h3>Monthly Collection</h3>
+                <p id="monthlyCollection">₹0</p>
+            </div>
+
+            <div class="summary-card">
+                <h3>Pending Fees</h3>
+                <p id="pendingFees">₹0</p>
+            </div>
+
+        </section>
+
+        <section class="report-section">
+
+            <h2>Date-wise Collection Report</h2>
+
+            <div class="filter-box">
+                <div>
+                    <label for="startDate">Start Date</label>
+                    <input type="date" id="startDate">
+                </div>
+
+                <div>
+                    <label for="endDate">End Date</label>
+                    <input type="date" id="endDate">
+                </div>
+
+                <button id="filterBtn">Generate Report</button>
+                <button id="resetBtn" class="reset-btn">Reset</button>
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Payment ID</th>
+                            <th>Invoice ID</th>
+                            <th>Payment Date</th>
+                            <th>Payment Method</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="reportTableBody">
+                        <tr>
+                            <td colspan="6">Loading payment records...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="payment-reports.js"></script>
+
+</body>
+</html>

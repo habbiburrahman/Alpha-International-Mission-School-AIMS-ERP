@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIMS - Homework Management</title>
+    <link rel="stylesheet" href="homework.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header class="header">
+            <div>
+                <h1>AIMS ERP</h1>
+                <p>Homework Management</p>
+            </div>
+            <a href="dashboard.html" class="back-btn">← Dashboard</a>
+        </header>
+
+        <section class="form-section">
+            <h2>Assign New Homework</h2>
+
+            <form id="homeworkForm">
+
+                <div class="form-group">
+                    <label for="title">Homework Title</label>
+                    <input type="text" id="title"
+                        placeholder="Enter homework title" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea id="description"
+                        placeholder="Enter homework details"></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="classSelect">Class</label>
+                        <select id="classSelect" required>
+                            <option value="">Select Class</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="sectionSelect">Section</label>
+                        <select id="sectionSelect" required disabled>
+                            <option value="">Select Section</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="subjectSelect">Subject</label>
+                    <select id="subjectSelect" required>
+                        <option value="">Select Subject</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="assignedDate">Assigned Date</label>
+                        <input type="date" id="assignedDate" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dueDate">Submission Date</label>
+                        <input type="date" id="dueDate" required>
+                    </div>
+                </div>
+
+                <button type="submit" id="submitBtn">
+                    Assign Homework
+                </button>
+
+            </form>
+        </section>
+
+        <section class="list-section">
+            <h2>Homework Records</h2>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Class</th>
+                            <th>Section</th>
+                            <th>Subject</th>
+                            <th>Assigned Date</th>
+                            <th>Due Date</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="homeworkTable">
+                        <tr>
+                            <td colspan="7">Loading homework...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="homework.js"></script>
+
+</body>
+</html>

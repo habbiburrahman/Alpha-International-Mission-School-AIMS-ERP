@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIMS ERP - Student Report Card</title>
+    <link rel="stylesheet" href="report-card.css">
+</head>
+<body>
+
+    <header class="header">
+        <div>
+            <h1>AIMS ERP</h1>
+            <p>Student Report Card Management</p>
+        </div>
+        <a href="dashboard.html" class="back-btn">← Back to Dashboard</a>
+    </header>
+
+    <main class="container">
+
+        <section class="page-heading">
+            <h2>Student Report Card</h2>
+            <p>View student academic performance and examination results.</p>
+        </section>
+
+        <section class="filter-section">
+            <h2>Generate Report Card</h2>
+
+            <div class="filter-grid">
+                <div class="form-group">
+                    <label for="studentId">Select Student</label>
+                    <select id="studentId">
+                        <option value="">Select Student</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="examId">Select Examination</label>
+                    <select id="examId">
+                        <option value="">Select Examination</option>
+                    </select>
+                </div>
+            </div>
+
+            <button id="generateReport" type="button">
+                Generate Report Card
+            </button>
+
+            <p id="message"></p>
+        </section>
+
+        <section id="reportCard" class="report-card" hidden>
+
+            <div class="school-heading">
+                <h1>ALPHA INTERNATIONAL MISSION SCHOOL</h1>
+                <p>STUDENT ACADEMIC REPORT CARD</p>
+                <hr>
+            </div>
+
+            <div class="student-details">
+                <div>
+                    <strong>Student Name:</strong>
+                    <span id="reportStudentName">-</span>
+                </div>
+
+                <div>
+                    <strong>Admission Number:</strong>
+                    <span id="admissionNumber">-</span>
+                </div>
+
+                <div>
+                    <strong>Examination:</strong>
+                    <span id="reportExamName">-</span>
+                </div>
+
+                <div>
+                    <strong>Exam Date:</strong>
+                    <span id="reportExamDate">-</span>
+                </div>
+            </div>
+
+            <h3 class="marks-heading">Subject-wise Marks</h3>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Subject</th>
+                            <th>Maximum Marks</th>
+                            <th>Passing Marks</th>
+                            <th>Obtained Marks</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="reportTableBody"></tbody>
+                </table>
+            </div>
+
+            <div class="result-summary">
+                <div>
+                    <span>Total Maximum Marks</span>
+                    <strong id="maximumTotal">0</strong>
+                </div>
+
+                <div>
+                    <span>Total Obtained Marks</span>
+                    <strong id="obtainedTotal">0</strong>
+                </div>
+
+                <div>
+                    <span>Percentage</span>
+                    <strong id="percentage">0%</strong>
+                </div>
+
+                <div>
+                    <span>Overall Result</span>
+                    <strong id="overallResult">-</strong>
+                </div>
+            </div>
+
+            <div class="signature-section">
+                <div>
+                    <p>Class Teacher Signature</p>
+                </div>
+
+                <div>
+                    <p>Principal Signature</p>
+                </div>
+            </div>
+
+            <div class="print-section">
+                <button id="printReport" type="button">
+                    Print Report Card
+                </button>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="report-card.js"></script>
+
+</body>
+</html>

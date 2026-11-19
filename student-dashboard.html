@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student & Parent Dashboard | AIMS</title>
+    <link rel="stylesheet" href="student-dashboard.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="brand">
+        <img src="logo.jpg" alt="AIMS Logo">
+        <div>
+            <h2>AIMS</h2>
+            <p>Student & Parent Portal</p>
+        </div>
+    </div>
+
+    <div class="user-area">
+        <span id="studentName">Loading...</span>
+        <button id="logoutBtn">Logout</button>
+    </div>
+</header>
+
+<main class="container">
+
+    <section class="welcome">
+        <h1>Welcome to AIMS Portal</h1>
+        <p>Manage your academic activities in one place.</p>
+    </section>
+
+    <section class="profile-card">
+        <h2>Student Information</h2>
+
+        <div class="student-profile">
+            <div class="student-photo-container">
+                <img id="studentPhoto" src="" alt="Student Photo" style="display:none;">
+                <div id="noStudentPhoto">Photo Not Available</div>
+            </div>
+
+            <div class="profile-details">
+                <p><strong>Student Name:</strong> <span id="profileName">Loading...</span></p>
+                <p><strong>Admission Number:</strong> <span id="admissionNumber">--</span></p>
+                <p><strong>Class:</strong> <span id="studentClass">--</span></p>
+                <p><strong>Section:</strong> <span id="studentSection">--</span></p>
+                <p><strong>Date of Birth:</strong> <span id="studentDOB">--</span></p>
+                <p><strong>Gender:</strong> <span id="studentGender">--</span></p>
+                <p><strong>Parent Name:</strong> <span id="parentName">--</span></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEE SUMMARY -->
+    <section class="fee-summary-section" id="fee-summary-section">
+
+        <h2>Fee Summary</h2>
+
+        <div class="fee-summary-grid">
+
+            <div class="fee-summary-card total-card">
+                <h3>Total Fees</h3>
+                <p id="totalFees">₹0.00</p>
+            </div>
+
+            <div class="fee-summary-card paid-card">
+                <h3>Paid Fees</h3>
+                <p id="paidFees">₹0.00</p>
+            </div>
+
+            <div class="fee-summary-card due-card">
+                <h3>Remaining Due</h3>
+                <p id="remainingFees">₹0.00</p>
+            </div>
+
+            <div class="fee-summary-card status-card">
+                <h3>Payment Status</h3>
+                <p id="feeStatus">Loading...</p>
+            </div>
+
+        </div>
+
+        <h3 class="fee-invoice-heading">Fee Invoice Details</h3>
+
+        <div class="fee-table-container">
+            <table class="fee-table">
+                <thead>
+                    <tr>
+                        <th>Invoice Number</th>
+                        <th>Total Amount</th>
+                        <th>Paid Amount</th>
+                        <th>Due Amount</th>
+                        <th>Status</th>
+                        <th>Due Date</th>
+                    </tr>
+                </thead>
+
+                <tbody id="studentFeeList">
+                    <tr>
+                        <td colspan="6">Loading fee details...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p id="feeMessage" class="fee-message"></p>
+
+    </section>
+
+    <!-- ACADEMIC DASHBOARD -->
+    <section class="dashboard-section">
+
+        <h2>Academic Dashboard</h2>
+
+        <div class="dashboard-grid">
+
+            <a href="student-attendance.html" class="dashboard-card">
+                <h3>Attendance</h3>
+                <p>View your attendance records.</p>
+                <span>Coming Soon</span>
+            </a>
+
+            <a href="student-homework.html" class="dashboard-card">
+                <h3>Homework</h3>
+                <p>View and submit homework PDFs.</p>
+                <span>Open Module →</span>
+            </a>
+
+            <a href="student-results.html" class="dashboard-card coming-soon">
+                <h3>Examination Results</h3>
+                <p>View marks and report cards.</p>
+                <span>Coming Soon</span>
+            </a>
+
+            <a href="#fee-summary-section" class="dashboard-card">
+                <h3>Fee Details</h3>
+                <p>Check total fees, paid fees and remaining dues.</p>
+                <span>View Fee Details →</span>
+            </a>
+
+            <a href="student-timetable.html" class="dashboard-card coming-soon">
+                <h3>Class Timetable</h3>
+                <p>View your weekly timetable.</p>
+                <span>Coming Soon</span>
+            </a>
+
+            <a href="student-notices.html" class="dashboard-card coming-soon">
+                <h3>School Notices</h3>
+                <p>Read school announcements.</p>
+                <span>Coming Soon</span>
+            </a>
+
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>© Alpha International Mission School | AIMS</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="student-dashboard.js"></script>
+
+</body>
+</html>

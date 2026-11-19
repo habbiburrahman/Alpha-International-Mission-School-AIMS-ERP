@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIMS - Student Management</title>
+    <link rel="stylesheet" href="students.css">
+</head>
+<body>
+
+    <header class="topbar">
+        <div>
+            <h1>AIMS School ERP</h1>
+            <p>Student Management</p>
+        </div>
+        <a href="dashboard.html">Back to Dashboard</a>
+    </header>
+
+    <main class="container">
+
+        <section class="page-heading">
+            <h2>Student Management</h2>
+            <p>Add and manage school student records.</p>
+        </section>
+
+        <section class="form-card">
+            <h2>Add New Student</h2>
+
+            <form id="studentForm">
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="studentName">Student Name</label>
+                        <input type="text" id="studentName"
+                            placeholder="Enter student name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="admissionNumber">Admission Number</label>
+                        <input type="text" id="admissionNumber"
+                            placeholder="Enter admission number" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dateOfBirth">Date of Birth</label>
+                        <input type="date" id="dateOfBirth" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <select id="gender" required>
+                            <option value="">Select Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="admissionDate">Admission Date</label>
+                        <input type="date" id="admissionDate" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="classId">Class</label>
+                        <select id="classId" required>
+                            <option value="">Loading classes...</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="sectionId">Section</label>
+                        <select id="sectionId" required disabled>
+                            <option value="">Select class first</option>
+                        </select>
+                    </div>
+
+                    <!-- Student Photo Upload -->
+                    <div class="form-group">
+                        <label for="studentPhoto">Student Profile Photo</label>
+                        <input
+                            type="file"
+                            id="studentPhoto"
+                            accept="image/jpeg,image/png,image/webp"
+                            required
+                        >
+                        <p>JPG, PNG or WEBP. Maximum size: 2 MB.</p>
+
+                        <div id="studentPhotoPreviewContainer" hidden>
+                            <img
+                                id="studentPhotoPreview"
+                                alt="Student Photo Preview"
+                            >
+                        </div>
+                    </div>
+
+                </div>
+
+                <button type="submit" id="saveStudentBtn">
+                    Save Student
+                </button>
+
+                <p id="formMessage"></p>
+
+            </form>
+        </section>
+
+        <section class="table-card">
+            <h2>Student Records</h2>
+
+            <div class="form-grid" style="margin-bottom: 20px;">
+
+                <div class="form-group">
+                    <label for="filterClassId">Filter by Class</label>
+                    <select id="filterClassId">
+                        <option value="all">All Classes</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="filterSectionId">Filter by Section</label>
+                    <select id="filterSectionId" disabled>
+                        <option value="all">All Sections</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Photo</th>
+                            <th>Student Name</th>
+                            <th>Admission Number</th>
+                            <th>Date of Birth</th>
+                            <th>Gender</th>
+                            <th>Admission Date</th>
+                            <th>Class</th>
+                            <th>Section</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="studentTableBody">
+                        <tr>
+                            <td colspan="10">Loading students...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="students.js"></script>
+
+</body>
+</html>

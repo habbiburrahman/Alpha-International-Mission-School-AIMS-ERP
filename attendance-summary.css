@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f2f5fa;
+    color: #263238;
+}
+
+.container {
+    width: 95%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+header {
+    background: #173b70;
+    color: white;
+    padding: 22px 25px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+header h1 {
+    font-size: 25px;
+    margin-bottom: 6px;
+}
+
+header p {
+    color: #dce8f8;
+}
+
+.back-btn {
+    background: white;
+    color: #173b70;
+    padding: 11px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    background: white;
+    margin-top: 25px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+main h2 {
+    color: #173b70;
+    margin-bottom: 22px;
+}
+
+.filter-box {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.filter-box label {
+    font-weight: bold;
+}
+
+input {
+    padding: 11px;
+    border: 1px solid #ccd4df;
+    border-radius: 6px;
+}
+
+button {
+    background: #1769aa;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #10548b;
+}
+
+#message {
+    margin-bottom: 18px;
+    font-weight: bold;
+}
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 18px;
+}
+
+.summary-card {
+    padding: 25px 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+.summary-card h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.summary-card p {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.total {
+    background: #345b91;
+}
+
+.present {
+    background: #219653;
+}
+
+.absent {
+    background: #d94343;
+}
+
+.late {
+    background: #e49a20;
+}
+
+.leave {
+    background: #7655b5;
+}
+
+.percentage-box {
+    margin-top: 30px;
+    padding: 25px;
+    background: #f4f7fc;
+    border-radius: 10px;
+}
+
+.percentage-box h3 {
+    color: #173b70;
+    margin-bottom: 15px;
+}
+
+#attendancePercentage {
+    font-size: 32px;
+    font-weight: bold;
+    color: #219653;
+    margin-bottom: 15px;
+}
+
+.progress {
+    width: 100%;
+    height: 18px;
+    background: #dce3ed;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#progressBar {
+    width: 0%;
+    height: 100%;
+    background: #219653;
+    border-radius: 20px;
+    transition: width 0.4s ease;
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    .filter-box {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .filter-box input,
+    .filter-box button {
+        width: 100%;
+    }
+}

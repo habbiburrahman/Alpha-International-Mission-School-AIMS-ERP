@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deleted Accounts History | AIMS ERP</title>
+    <link rel="stylesheet" href="deleted-accounts.css">
+</head>
+<body>
+
+    <header class="topbar">
+        <div class="brand">
+            <img src="logo.jpg" alt="AIMS Logo">
+            <div>
+                <h2>AIMS ERP</h2>
+                <p>Deleted Accounts History</p>
+            </div>
+        </div>
+        <div class="header-actions">
+            <a href="dashboard.html">← Dashboard</a>
+            <button id="logoutBtn">Logout</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="page-heading">
+            <h1>Deleted Accounts History</h1>
+            <p>View deleted student and teacher records with preserved fee history.</p>
+        </section>
+
+        <section class="summary">
+            <div class="summary-card">
+                <span>Total Deleted Accounts</span>
+                <strong id="totalAccounts">0</strong>
+            </div>
+            <div class="summary-card">
+                <span>Deleted Students</span>
+                <strong id="totalStudents">0</strong>
+            </div>
+            <div class="summary-card">
+                <span>Deleted Teachers</span>
+                <strong id="totalTeachers">0</strong>
+            </div>
+        </section>
+
+        <section class="filters">
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Search by name or ID..."
+            >
+
+            <select id="typeFilter">
+                <option value="all">All Accounts</option>
+                <option value="student">Students</option>
+                <option value="teacher">Teachers</option>
+            </select>
+        </section>
+
+        <p id="loadingMessage">Loading deleted account records...</p>
+        <p id="errorMessage" class="error-message"></p>
+
+        <section id="archiveList" class="archive-list"></section>
+
+        <p id="emptyMessage" class="empty-message" hidden>
+            No deleted account records found.
+        </p>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="deleted-accounts.js"></script>
+
+</body>
+</html>

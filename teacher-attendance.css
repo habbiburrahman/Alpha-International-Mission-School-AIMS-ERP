@@ -1,0 +1,144 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f1f5f9;
+    color: #1e293b;
+}
+
+.container {
+    width: 95%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+header {
+    background: #1e3a8a;
+    color: white;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+header p {
+    color: #dbeafe;
+}
+
+main {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #1e3a8a;
+}
+
+.attendance-form {
+    max-width: 600px;
+    margin-bottom: 40px;
+}
+
+label {
+    display: block;
+    margin: 15px 0 8px;
+    font-weight: bold;
+}
+
+select,
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+button {
+    margin-top: 20px;
+    padding: 13px 22px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+#message {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 13px;
+    border: 1px solid #e2e8f0;
+    text-align: left;
+}
+
+th {
+    background: #1e3a8a;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 23px;
+    }
+}
+
+
+.back-btn {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 11px 20px;
+    background: white;
+    color: #1e3a8a;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background: #dbeafe;
+}

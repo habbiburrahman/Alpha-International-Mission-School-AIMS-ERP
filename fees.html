@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIMS - Fees Management</title>
+    <link rel="stylesheet" href="fees.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <div>
+                <h1>AIMS School ERP</h1>
+                <p>Fees Management</p>
+            </div>
+            <a href="dashboard.html" class="back-btn">Back to Dashboard</a>
+        </header>
+
+        <main>
+            <h2>Fees Overview</h2>
+
+            <section class="stats-grid">
+                <div class="stat-card total">
+                    <h3>Total Invoices</h3>
+                    <p id="totalInvoices">0</p>
+                </div>
+
+                <div class="stat-card paid">
+                    <h3>Paid Invoices</h3>
+                    <p id="paidInvoices">0</p>
+                </div>
+
+                <div class="stat-card pending">
+                    <h3>Pending Invoices</h3>
+                    <p id="pendingInvoices">0</p>
+                </div>
+
+                <div class="stat-card partial">
+                    <h3>Partial Invoices</h3>
+                    <p id="partialInvoices">0</p>
+                </div>
+            </section>
+
+            <section class="actions">
+                <h2>Fee Management</h2>
+
+                <div class="action-grid">
+                    <a href="fee-structures.html" class="action-card">
+                        <h3>Fee Structure</h3>
+                        <p>Manage class-wise fees</p>
+                    </a>
+
+                    <a href="fee-invoices.html" class="action-card">
+                        <h3>Fee Invoices</h3>
+                        <p>Create and view student invoices</p>
+                    </a>
+
+                    <a href="fee-payments.html" class="action-card">
+                        <h3>Fee Payments</h3>
+                        <p>Record student fee payments</p>
+                    </a>
+                </div>
+            </section>
+
+            <section class="invoice-section">
+                <h2>Recent Fee Invoices</h2>
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Invoice No.</th>
+                                <th>Student ID</th>
+                                <th>Issue Date</th>
+                                <th>Due Date</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="invoiceTableBody">
+                            <tr>
+                                <td colspan="6">Loading invoices...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <p id="message"></p>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="fees.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,293 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f3f5f9;
+    color: #263238;
+}
+
+.topbar {
+    background: #172554;
+    color: white;
+    padding: 15px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    background: white;
+    border-radius: 8px;
+}
+
+.brand h2 {
+    font-size: 20px;
+}
+
+.brand p {
+    font-size: 12px;
+    color: #cbd5e1;
+    margin-top: 4px;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.header-actions a,
+.header-actions button {
+    color: white;
+    text-decoration: none;
+    background: #334b83;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.header-actions button {
+    background: #dc2626;
+}
+
+.container {
+    width: 92%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+.page-heading {
+    margin-bottom: 25px;
+}
+
+.page-heading h1 {
+    font-size: 27px;
+    margin-bottom: 8px;
+}
+
+.page-heading p {
+    color: #64748b;
+    font-size: 14px;
+}
+
+.summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.summary-card {
+    background: white;
+    padding: 22px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.summary-card span {
+    display: block;
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.summary-card strong {
+    font-size: 27px;
+    color: #172554;
+}
+
+.filters {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 22px;
+}
+
+.filters input,
+.filters select {
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    background: white;
+    font-size: 14px;
+}
+
+.filters input {
+    flex: 1;
+}
+
+.archive-list {
+    display: grid;
+    gap: 18px;
+}
+
+.archive-card {
+    background: white;
+    border-radius: 10px;
+    padding: 22px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.archive-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+}
+
+.archive-header h2 {
+    font-size: 19px;
+    margin-bottom: 6px;
+}
+
+.archive-header p {
+    color: #64748b;
+    font-size: 13px;
+}
+
+.account-type {
+    background: #e0e7ff;
+    color: #3730a3;
+    padding: 6px 11px;
+    border-radius: 20px;
+    font-size: 12px;
+    text-transform: capitalize;
+}
+
+.record-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 18px;
+}
+
+.record-item {
+    background: #f8fafc;
+    padding: 12px;
+    border-radius: 7px;
+}
+
+.record-item span {
+    display: block;
+    color: #64748b;
+    font-size: 12px;
+    margin-bottom: 6px;
+}
+
+.record-item strong {
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+.status-completed {
+    color: #15803d;
+}
+
+.status-not_required {
+    color: #475569;
+}
+
+.status-pending {
+    color: #b45309;
+}
+
+.status-failed {
+    color: #dc2626;
+}
+
+.invoice-section {
+    border-top: 1px solid #e2e8f0;
+    padding-top: 16px;
+    margin-top: 12px;
+}
+
+.invoice-section h3 {
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.invoice-box {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 7px;
+    padding: 14px;
+    margin-bottom: 12px;
+}
+
+.invoice-box p {
+    font-size: 13px;
+    margin: 6px 0;
+    overflow-wrap: anywhere;
+}
+
+.payment-list {
+    margin: 10px 0 0 18px;
+    font-size: 13px;
+    color: #475569;
+}
+
+.no-invoices {
+    color: #64748b;
+    font-size: 13px;
+}
+
+.error-message {
+    color: #dc2626;
+    margin: 12px 0;
+}
+
+.empty-message {
+    text-align: center;
+    padding: 35px;
+    background: white;
+    border-radius: 10px;
+    color: #64748b;
+}
+
+#loadingMessage {
+    color: #475569;
+    margin: 20px 0;
+}
+
+@media (max-width: 700px) {
+    .summary {
+        grid-template-columns: 1fr;
+    }
+
+    .record-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .filters {
+        flex-direction: column;
+    }
+
+    .page-heading h1 {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 420px) {
+    .record-grid {
+        grid-template-columns: 1fr;
+    }
+}

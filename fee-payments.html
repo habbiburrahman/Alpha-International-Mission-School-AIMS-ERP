@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIMS ERP - Fee Payments</title>
+    <link rel="stylesheet" href="fee-payments.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+    <h1>AIMS ERP</h1>
+    <p>Fee Payment Management</p>
+
+    <a href="dashboard.html" class="back-btn">
+        ← Back to Dashboard
+    </a>
+</header>
+
+        <main>
+
+            <h2>Record Fee Payment</h2>
+
+            <div class="payment-form">
+
+                <label for="invoice">Select Invoice</label>
+                <select id="invoice">
+                    <option value="">Loading Invoices...</option>
+                </select>
+
+                <div id="invoiceDetails"></div>
+
+                <label for="amount">Payment Amount (₹)</label>
+                <input type="number" id="amount" min="0.01" step="0.01">
+
+                <label for="paymentMethod">Payment Method</label>
+                <select id="paymentMethod">
+                    <option value="">Select Payment Method</option>
+                    <option value="cash">Cash</option>
+                    <option value="cheque">Cheque</option>
+                    <option value="bank_transfer">Bank Transfer</option>
+                    <option value="online">Online (UPI)</option>
+                </select>
+
+                <label for="transactionReference">
+                    Transaction Reference (Optional)
+                </label>
+                <input type="text" id="transactionReference">
+
+                <button type="button" id="savePayment">
+                    Save Payment
+                </button>
+
+                <p id="message"></p>
+
+            </div>
+
+            <h2>Payment Records</h2>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Invoice ID</th>
+                            <th>Amount</th>
+                            <th>Payment Method</th>
+                            <th>Payment Status</th>
+                            <th>Transaction Reference</th>
+                            <th>Payment Date</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="paymentList">
+                        <tr>
+                            <td colspan="6">Loading payments...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="fee-payments.js"></script>
+
+</body>
+</html>

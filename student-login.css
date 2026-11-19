@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(10, 31, 59, 0.94),
+            rgba(23, 74, 111, 0.90)
+        ),
+        url("images/school-background.jpg") center/cover no-repeat;
+}
+
+.login-container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box {
+    width: 100%;
+    max-width: 540px;
+    background: #ffffff;
+    padding: 38px 35px;
+    border-radius: 18px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* SCHOOL BRAND BACKGROUND */
+
+.school-brand {
+    background:
+        linear-gradient(
+            rgba(15, 39, 71, 0.45),
+            rgba(15, 39, 71, 0.45)
+        ),
+        url("back.jpg") center/cover no-repeat;
+
+    padding: 25px 15px;
+    border-radius: 14px;
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.school-brand img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 12px;
+}
+
+.school-brand h1 {
+    color: white;
+    font-size: 25px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.school-brand p {
+    color: #ffd36a;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+/* LOGIN HEADING */
+
+.login-heading {
+    margin: 25px 0;
+}
+
+.login-heading h3 {
+    color: #123b65;
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+.login-heading p {
+    color: #777;
+    font-size: 14px;
+}
+
+/* FORM */
+
+.form-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.login-box label {
+    display: block;
+    font-weight: bold;
+    color: #263b55;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #d5dce5;
+    border-radius: 8px;
+    outline: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.login-box input:focus {
+    border-color: #bd8b27;
+    box-shadow: 0 0 0 3px rgba(189, 139, 39, 0.12);
+}
+
+/* LOGIN BUTTON */
+
+.login-box button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+    background: #123b65;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-box button:hover {
+    background: #bd8b27;
+    transform: translateY(-2px);
+}
+
+/* MESSAGE */
+
+#message {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #d32f2f;
+}
+
+/* FOOTER */
+
+.login-footer {
+    border-top: 1px solid #eeeeee;
+    padding-top: 18px;
+    margin-top: 25px;
+}
+
+.login-footer p {
+    color: #bd8b27;
+    font-weight: bold;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.login-footer span {
+    color: #888;
+    font-size: 11px;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 480px) {
+
+    .login-container {
+        padding: 15px;
+    }
+
+    .login-box {
+        padding: 25px 20px;
+    }
+
+    .school-brand {
+        padding: 20px 10px;
+    }
+
+    .school-brand img {
+        width: 85px;
+        height: 85px;
+    }
+
+    .school-brand h1 {
+        font-size: 21px;
+    }
+
+    .school-brand p {
+        font-size: 12px;
+    }
+
+    .login-heading h3 {
+        font-size: 22px;
+    }
+}

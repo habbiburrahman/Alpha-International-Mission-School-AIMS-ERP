@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIMS Admin Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+    ☰
+</button>
+
+    <div class="sidebar">
+        <button class="close-menu" id="closeMenu" aria-label="Close menu">
+    &times;
+</button>
+
+        <div class="school-brand">
+            <img src="logo.jpg" alt="AIMS Logo">
+            <h2>AIMS ERP</h2>
+        </div>
+
+        <p class="admin-label">ADMIN PANEL</p>
+
+        <a href="dashboard.html" class="active">Dashboard</a>
+        
+        <details class="student-dropdown">
+          <summary>Students</summary>
+             <div class="dropdown-links">
+             <a href="students.html">Add Students</a>
+             <a href="attendance.html">Mark Students Attendance</a>
+             <a href="attendance-records.html">Attendance Records</a>
+             <a href="attendance-summary.html">Attendance Summary</a>
+         </div>
+        </details>
+
+
+        <details class="teacher-dropdown">
+            <summary>Teachers</summary>
+            <div class="dropdown-links">
+                <a href="teachers.html">Add Teacher</a>
+                <a href="teacher-attendance.html">Teacher Attendance</a>
+                <a href="teacher-attendance-reports.html">Teacher Attendance Reports</a>
+            </div>
+        </details>
+
+        
+
+
+        <details class="student-dropdown">
+         <summary>Fee</summary>
+          <div class="dropdown-links">
+           <a href="fees.html">Fees</a>
+           <a href="fee-structures.html">Fees Structure</a>
+           <a href="fee-payments.html">Fee Payments</a>
+           <a href="payment-reports.html">Fee Payment Reports</a>
+         </div>
+       </details>
+
+       <details class="student-dropdown">
+         <summary>Exam</summary>
+          <div class="dropdown-links">
+           <a href="exams.html">Exams Management</a>
+           <a href="exam-results.html">Exam Results</a>
+         </div>
+       </details>
+
+       <details class="student-dropdown">
+         <summary>Homeworks</summary>
+          <div class="dropdown-links">
+           <a href="homework.html">Homework</a>
+           <a href="homework-submissions.html">Homework Submission</a>
+         </div>
+       </details>
+
+       
+        
+       <details class="student-dropdown">
+         <summary>CLasses & Notices</summary>
+          <div class="dropdown-links">
+            <a href="classes.html">Classes & Sections</a>
+            <a href="admin-timetable.html">Time Table Management</a>
+            <a href="admin-notices.html">Notices</a>
+            <a href="#">Reports</a>
+         </div>
+       </details> 
+
+
+      <details class="student-dropdown">
+        <summary>Account History</summary>
+         <div class="dropdown-links">
+           <a href="deleted-accounts.html">Deleted Accounts History</a>
+         </div>
+      </details>
+
+        
+
+        <button id="logoutBtn">Logout</button>
+    </div>
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <main class="main-content">
+
+        <div class="mobile-school-logo">
+    <img src="logo.jpg" alt="AIMS School Logo">
+</div>
+
+        <header>
+            <div>
+                <h1>Admin Dashboard</h1>
+                <p>Welcome to Alpha International Mission School</p>
+            </div>
+
+            <div class="admin-info">
+                <span>Administrator</span>
+            </div>
+        </header>
+
+        <section class="stats">
+
+            <div class="stat-card">
+                <h3>Total Students</h3>
+                <h2 id="studentCount">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <h3>Total Teachers</h3>
+                <h2 id="teacherCount">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <h3>Total Classes</h3>
+                <h2 id="classCount">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <h3>Pending Fees</h3>
+                <h2 id="pendingFees">₹0</h2>
+            </div>
+
+        </section>
+
+        <section class="welcome-box">
+            <h2>Welcome, AIMS Administrator!</h2>
+            <p>
+                Manage students, teachers, attendance, fees,
+                examinations and other school activities from here.
+            </p>
+        </section>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="dashboard.js"></script>
+
+</body>
+</html>

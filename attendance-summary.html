@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIMS - Attendance Summary</title>
+    <link rel="stylesheet" href="attendance-summary.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div>
+                <h1>AIMS School ERP</h1>
+                <p>Attendance Summary</p>
+            </div>
+            <a href="dashboard.html" class="back-btn">Back to Dashboard</a>
+        </header>
+
+        <main>
+            <h2>Attendance Overview</h2>
+
+            <div class="filter-box">
+                <label for="dateFilter">Select Attendance Date:</label>
+                <input type="date" id="dateFilter">
+                <button id="loadBtn">View Summary</button>
+            </div>
+
+            <p id="message"></p>
+
+            <div class="summary-grid">
+                <div class="summary-card total">
+                    <h3>Total Records</h3>
+                    <p id="totalCount">0</p>
+                </div>
+
+                <div class="summary-card present">
+                    <h3>Present</h3>
+                    <p id="presentCount">0</p>
+                </div>
+
+                <div class="summary-card absent">
+                    <h3>Absent</h3>
+                    <p id="absentCount">0</p>
+                </div>
+
+                <div class="summary-card late">
+                    <h3>Late</h3>
+                    <p id="lateCount">0</p>
+                </div>
+
+                <div class="summary-card leave">
+                    <h3>Leave</h3>
+                    <p id="leaveCount">0</p>
+                </div>
+            </div>
+
+            <div class="percentage-box">
+                <h3>Attendance Percentage</h3>
+                <p id="attendancePercentage">0%</p>
+                <div class="progress">
+                    <div id="progressBar"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="attendance-summary.js"></script>
+
+</body>
+</html>

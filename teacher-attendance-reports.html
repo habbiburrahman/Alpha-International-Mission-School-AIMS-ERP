@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIMS - Teacher Attendance Reports</title>
+    <link rel="stylesheet" href="teacher-attendance-reports.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>AIMS ERP</h1>
+            <p>Teacher Attendance Reports</p>
+
+            <a href="dashboard.html" class="back-btn">
+    ← Back to Dashboard
+</a>
+        </header>
+
+        <main>
+            <h2>Attendance Reports</h2>
+
+            <div class="attendance-form">
+
+                <label for="reportDate">Daily Report</label>
+                <input type="date" id="reportDate">
+
+                <button id="dailyReport">View Daily Report</button>
+
+                <label for="reportMonth">Monthly Report</label>
+                <input type="month" id="reportMonth">
+
+                <button id="monthlyReport">View Monthly Report</button>
+
+            </div>
+
+            <h2>Attendance Summary</h2>
+
+            <div class="report-summary">
+                <div class="summary-card">
+                    <h3>Total</h3>
+                    <p id="totalCount">0</p>
+                </div>
+
+                <div class="summary-card">
+                    <h3>Present</h3>
+                    <p id="presentCount">0</p>
+                </div>
+
+                <div class="summary-card">
+                    <h3>Absent</h3>
+                    <p id="absentCount">0</p>
+                </div>
+
+                <div class="summary-card">
+                    <h3>Late</h3>
+                    <p id="lateCount">0</p>
+                </div>
+
+                <div class="summary-card">
+                    <h3>Half Day</h3>
+                    <p id="halfDayCount">0</p>
+                </div>
+
+                <div class="summary-card">
+                    <h3>Leave</h3>
+                    <p id="leaveCount">0</p>
+                </div>
+            </div>
+
+            <h2>Attendance Records</h2>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Teacher Name</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                            <th>Remarks</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="reportList">
+                        <tr>
+                            <td colspan="4">Select a date or month to view report.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p id="reportMessage"></p>
+
+        </main>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="teacher-attendance-reports.js"></script>
+
+</body>
+</html>

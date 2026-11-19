@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIMS - Student Attendance</title>
+    <link rel="stylesheet" href="attendance.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>AIMS School ERP</h1>
+        <h2>Student Attendance Management</h2>
+
+        <div class="attendance-filters">
+            <label for="classSelect">Select Class</label>
+            <select id="classSelect">
+                <option value="">Select Class</option>
+            </select>
+
+            <label for="sectionSelect">Select Section</label>
+            <select id="sectionSelect" disabled>
+                <option value="">Select Section</option>
+            </select>
+
+            <label for="attendanceDate">Attendance Date</label>
+            <input type="date" id="attendanceDate">
+        </div>
+
+        <h3>Student List</h3>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Student Name</th>
+                        <th>Admission Number</th>
+                        <th>Attendance Status</th>
+                    </tr>
+                </thead>
+                <tbody id="attendanceTableBody">
+                    <tr>
+                        <td colspan="3">Select class and section first.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <button id="saveAttendanceBtn">Save Attendance</button>
+        <p id="message"></p>
+
+        <a href="dashboard.html">Back to Dashboard</a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="attendance.js"></script>
+
+</body>
+</html>

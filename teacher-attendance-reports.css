@@ -1,0 +1,220 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+}
+
+.container {
+    width: 92%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+/* Header */
+header {
+    background: #1e3a8a;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 16px;
+}
+
+/* Back Button */
+.back-btn {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 11px 20px;
+    background: white;
+    color: #1e3a8a;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background: #dbeafe;
+    transform: translateY(-2px);
+}
+
+/* Main Content */
+main {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+}
+
+h2 {
+    color: #1e3a8a;
+    margin: 20px 0;
+    font-size: 22px;
+}
+
+/* Attendance Form */
+.attendance-form {
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.attendance-form label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.attendance-form input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.attendance-form input:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+/* Buttons */
+button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 13px 18px;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+/* Summary Cards */
+.report-summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin: 20px 0 30px;
+}
+
+.summary-card {
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    padding: 22px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.summary-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.summary-card h3 {
+    color: #1e3a8a;
+    font-size: 17px;
+    margin-bottom: 12px;
+}
+
+.summary-card p {
+    font-size: 28px;
+    font-weight: bold;
+    color: #2563eb;
+}
+
+/* Table */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 650px;
+}
+
+th,
+td {
+    padding: 14px;
+    border: 1px solid #e2e8f0;
+    text-align: left;
+}
+
+th {
+    background: #1e3a8a;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+tbody tr:hover {
+    background: #eff6ff;
+}
+
+/* Report Message */
+#reportMessage {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .container {
+        width: 96%;
+        margin: 12px auto;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    header {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    .report-summary {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .summary-card {
+        padding: 16px;
+    }
+}
+
+@media (max-width: 450px) {
+    .report-summary {
+        grid-template-columns: 1fr;
+    }
+}

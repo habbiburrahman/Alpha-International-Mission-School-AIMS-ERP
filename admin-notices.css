@@ -1,0 +1,195 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f6fb;
+    color: #263445;
+}
+
+.header {
+    background: #173b65;
+    color: white;
+    padding: 22px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.header h1 {
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.header p {
+    color: #d5e5f7;
+}
+
+.back-btn {
+    background: white;
+    color: #173b65;
+    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.container {
+    width: 92%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+.form-card,
+.table-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
+}
+
+h2 {
+    color: #173b65;
+    margin-bottom: 22px;
+}
+
+form label {
+    display: block;
+    margin: 15px 0 7px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form textarea,
+form select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccd5df;
+    border-radius: 6px;
+    font-size: 15px;
+    font-family: inherit;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form input:focus,
+form textarea:focus,
+form select:focus {
+    outline: none;
+    border-color: #2878c7;
+}
+
+.publish-option {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.publish-option input {
+    width: 17px;
+    height: 17px;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+button {
+    border: none;
+    padding: 11px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#saveBtn {
+    background: #1769aa;
+    color: white;
+}
+
+#cancelBtn {
+    background: #e5eaf0;
+    color: #263445;
+}
+
+button:hover,
+.back-btn:hover {
+    opacity: 0.85;
+}
+
+#statusMessage {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 650px;
+}
+
+th,
+td {
+    padding: 13px;
+    border-bottom: 1px solid #e4e9ef;
+    text-align: left;
+}
+
+th {
+    background: #edf3fa;
+    color: #173b65;
+}
+
+.status-published {
+    color: #16834a;
+    font-weight: bold;
+}
+
+.status-draft {
+    color: #b7791f;
+    font-weight: bold;
+}
+
+.action-btn {
+    margin: 3px;
+    padding: 7px 10px;
+    color: white;
+}
+
+.edit-btn {
+    background: #2878c7;
+}
+
+.delete-btn {
+    background: #d94343;
+}
+
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    .form-card,
+    .table-card {
+        padding: 17px;
+    }
+}

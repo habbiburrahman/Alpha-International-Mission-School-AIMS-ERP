@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIMS - Attendance Records</title>
+    <link rel="stylesheet" href="attendance-records.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div>
+                <h1>AIMS School ERP</h1>
+                <p>Attendance Records</p>
+            </div>
+            <a href="dashboard.html" class="back-btn">Back to Dashboard</a>
+        </header>
+
+        <main>
+            <h2>Student Attendance Records</h2>
+
+            <div class="filters">
+                <div>
+                    <label for="dateFilter">Filter by Date</label>
+                    <input type="date" id="dateFilter">
+                </div>
+
+                <div>
+                    <label for="statusFilter">Filter by Status</label>
+                    <select id="statusFilter">
+                        <option value="">All Status</option>
+                        <option value="Present">Present</option>
+                        <option value="Absent">Absent</option>
+                        <option value="Late">Late</option>
+                        <option value="Leave">Leave</option>
+                    </select>
+                </div>
+
+                <button id="filterBtn">Apply Filter</button>
+                <button id="resetBtn" class="reset-btn">Reset</button>
+            </div>
+
+            <p id="message"></p>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Student Name</th>
+                            <th>Admission No.</th>
+                            <th>Class</th>
+                            <th>Section</th>
+                            <th>Roll No.</th>
+                            <th>Status</th>
+                            <th>Remarks</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="recordsTableBody">
+                        <tr>
+                            <td colspan="8">Loading records...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p id="totalRecords">Total Records: 0</p>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="attendance-records.js"></script>
+
+</body>
+</html>

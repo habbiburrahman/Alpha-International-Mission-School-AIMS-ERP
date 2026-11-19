@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examination Results | AIMS</title>
+    <link rel="stylesheet" href="student-results.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="brand">
+        <img src="logo.jpg" alt="AIMS Logo">
+        <div>
+            <h2>AIMS</h2>
+            <p>Student & Parent Portal</p>
+        </div>
+    </div>
+
+    <a href="student-dashboard.html">Back to Dashboard</a>
+</header>
+
+<main class="container">
+
+    <h1>Examination Results</h1>
+    <p class="subtitle">View your examination marks and academic performance.</p>
+
+    <section class="result-summary">
+
+        <div class="summary-card">
+            <h3>Total Marks</h3>
+            <p id="totalObtained">0</p>
+        </div>
+
+        <div class="summary-card">
+            <h3>Maximum Marks</h3>
+            <p id="maximumMarks">0</p>
+        </div>
+
+        <div class="summary-card">
+            <h3>Percentage</h3>
+            <p id="percentage">0%</p>
+        </div>
+
+        <div class="summary-card">
+            <h3>Result</h3>
+            <p id="resultStatus">--</p>
+        </div>
+
+    </section>
+
+    <section class="results-section">
+
+        <h2>Subject-wise Marks</h2>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Marks Obtained</th>
+                        <th>Maximum Marks</th>
+                        <th>Remarks</th>
+                    </tr>
+                </thead>
+
+                <tbody id="resultsTable">
+                    <tr>
+                        <td colspan="4">Loading results...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    © Alpha International Mission School | AIMS
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="student-results.js"></script>
+
+</body>
+</html>

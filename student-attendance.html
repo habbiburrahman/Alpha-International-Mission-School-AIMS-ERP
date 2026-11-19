@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Attendance | AIMS</title>
+    <link rel="stylesheet" href="student-attendance.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="brand">
+        <img src="images/logo.jpg" alt="AIMS Logo">
+        <div>
+            <h2>AIMS</h2>
+            <p>Student & Parent Portal</p>
+        </div>
+    </div>
+
+    <a href="student-dashboard.html">Back to Dashboard</a>
+</header>
+
+<main class="container">
+
+    <h1>My Attendance</h1>
+    <p class="subtitle">View your daily and monthly attendance records.</p>
+
+    <section class="summary-grid">
+
+        <div class="summary-card">
+            <h3>Total Days</h3>
+            <p id="totalDays">0</p>
+        </div>
+
+        <div class="summary-card">
+            <h3>Present</h3>
+            <p id="presentDays">0</p>
+        </div>
+
+        <div class="summary-card">
+            <h3>Absent</h3>
+            <p id="absentDays">0</p>
+        </div>
+
+        <div class="summary-card">
+            <h3>Attendance %</h3>
+            <p id="attendancePercentage">0%</p>
+        </div>
+
+    </section>
+
+    <section class="attendance-section">
+        <h2>Attendance History</h2>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Remarks</th>
+                    </tr>
+                </thead>
+
+                <tbody id="attendanceTable">
+                    <tr>
+                        <td colspan="3">Loading attendance...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    © Alpha International Mission School | AIMS
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="student-attendance.js"></script>
+
+</body>
+</html>

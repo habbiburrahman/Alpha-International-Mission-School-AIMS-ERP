@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIMS - Homework Submissions</title>
+    <link rel="stylesheet" href="homework-submissions.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div>
+                <h1>AIMS ERP</h1>
+                <p>Homework Submission Management</p>
+            </div>
+            <a href="dashboard.html" class="back-btn">← Dashboard</a>
+        </header>
+
+        <section class="page-title">
+            <h2>Homework Submissions</h2>
+            <p>View student homework submissions and their status.</p>
+        </section>
+
+        <section class="filters">
+            <div>
+                <label for="homeworkSelect">Select Homework</label>
+                <select id="homeworkSelect">
+                    <option value="">Loading homework...</option>
+                </select>
+            </div>
+
+            <button type="button" id="loadBtn">View Submissions</button>
+        </section>
+
+        <section class="summary">
+            <div class="summary-card">
+                <h3 id="totalCount">0</h3>
+                <p>Total Submissions</p>
+            </div>
+
+            <div class="summary-card">
+                <h3 id="submittedCount">0</h3>
+                <p>Submitted</p>
+            </div>
+
+            <div class="summary-card">
+                <h3 id="pendingCount">0</h3>
+                <p>Pending Review</p>
+            </div>
+        </section>
+
+        <section class="table-section">
+            <h3>Submission Records</h3>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                             <th>Student</th>
+                             <th>Admission No.</th>
+                             <th>Submission</th>
+                             <th>Submitted At</th>
+                             <th>PDF File</th>
+                             <th>Status</th>
+                             <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="submissionTable">
+                        <tr>
+                            <td colspan="6">Select homework to view submissions.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <script src="homework-submissions.js"></script>
+</body>
+</html>

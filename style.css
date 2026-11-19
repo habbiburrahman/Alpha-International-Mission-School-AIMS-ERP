@@ -1,0 +1,286 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #f4f7fb;
+    color: #183653;
+}
+
+/* NAVBAR */
+
+.navbar {
+    background: #123b65;
+    padding: 15px 7%;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.brand img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.brand h2 {
+    color: white;
+    font-size: 25px;
+}
+
+.brand p {
+    color: #f5d58a;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 360px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+
+    background:
+        linear-gradient(
+            rgba(10, 31, 59, 0.72),
+            rgba(10, 31, 59, 0.82)
+        ),
+        url("images/school-background.jpg") center/cover no-repeat;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero h1 {
+    color: white;
+    font-size: 38px;
+    margin-bottom: 18px;
+}
+
+.hero p {
+    color: #eeeeee;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 28px;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 13px 28px;
+    background: #bd8b27;
+    color: white;
+    text-decoration: none;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+/* PORTALS */
+
+.portals {
+    padding: 65px 7%;
+    text-align: center;
+}
+
+.portals > h2 {
+    font-size: 30px;
+    color: #123b65;
+}
+
+.section-subtitle {
+    color: #777;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.portal-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.portal-card {
+    background: white;
+    padding: 35px 25px;
+    border-radius: 14px;
+    box-shadow: 0 5px 22px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.portal-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.13);
+}
+
+.portal-icon {
+    font-size: 42px;
+    margin-bottom: 18px;
+}
+
+.portal-card h3 {
+    color: #123b65;
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.portal-card p {
+    color: #777;
+    font-size: 14px;
+    line-height: 1.7;
+    min-height: 95px;
+}
+
+.portal-card a {
+    display: block;
+    background: #123b65;
+    color: white;
+    text-decoration: none;
+    padding: 13px;
+    border-radius: 7px;
+    margin-top: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.portal-card a:hover {
+    background: #bd8b27;
+}
+
+/* FOOTER */
+
+footer {
+    background: #102e4d;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+footer h3 {
+    margin-bottom: 8px;
+}
+
+footer p {
+    color: #e5c47d;
+    font-size: 13px;
+}
+
+.copyright {
+    margin-top: 18px;
+    color: #cccccc;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 850px) {
+    .portal-container {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: auto;
+    }
+
+    .portal-card p {
+        min-height: auto;
+    }
+
+    .hero h1 {
+        font-size: 29px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 12px 18px;
+    }
+
+    .brand img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .brand h2 {
+        font-size: 21px;
+    }
+
+    .brand p {
+        font-size: 10px;
+    }
+
+    .hero {
+        min-height: 320px;
+    }
+
+    .hero h1 {
+        font-size: 25px;
+    }
+
+    .portals {
+        padding: 45px 18px;
+    }
+
+    .portals > h2 {
+        font-size: 25px;
+    }
+}
+
+
+
+.hero {
+    min-height: 465px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 70px 20px;
+
+    background:
+        linear-gradient(rgba(10, 30, 55, 0.65), rgba(10, 30, 55, 0.65)),
+        url("back1.jpeg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: white;
+}
+
+
+.logo {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+}
+
+.school-name {
+    font-size: 27px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* Increase School Logo and Name Size */
+
+.navbar img {
+    width: 85px !important;
+    height: 85px !important;
+    object-fit: contain;
+}
+
+.navbar h1,
+.navbar h2,
+.navbar .school-name {
+    font-size: 32px !important;
+    font-weight: 800 !important;
+}
+

@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIMS - Teacher Attendance</title>
+    <link rel="stylesheet" href="teacher-attendance.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>AIMS ERP</h1>
+            <p>Teacher Attendance Management</p>
+
+            <a href="dashboard.html" class="back-btn">
+               ← Back to Dashboard
+            </a>
+        </header>
+
+        <main>
+            <h2>Mark Teacher Attendance</h2>
+
+            <div class="attendance-form">
+
+                <label for="teacher">Select Teacher</label>
+                <select id="teacher">
+                    <option value="">Loading teachers...</option>
+                </select>
+
+                <label for="attendanceDate">Attendance Date</label>
+                <input type="date" id="attendanceDate">
+
+                <label for="status">Attendance Status</label>
+                <select id="status">
+                    <option value="Present">Present</option>
+                    <option value="Absent">Absent</option>
+                    <option value="Late">Late</option>
+                    <option value="Half Day">Half Day</option>
+                    <option value="Leave">Leave</option>
+                </select>
+
+                <label for="remarks">Remarks (Optional)</label>
+                <textarea id="remarks" placeholder="Enter remarks"></textarea>
+
+                <button id="saveAttendance">Save Attendance</button>
+
+                <p id="message"></p>
+
+            </div>
+
+            <h2>Teacher Attendance Records</h2>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Teacher Name</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                            <th>Remarks</th>
+                            <th>Action</th>
+
+                        </tr>
+                    </thead>
+
+                    <tbody id="attendanceList">
+                        <tr>
+                            <td colspan="4">Loading records...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="teacher-attendance.js"></script>
+
+</body>
+</html>

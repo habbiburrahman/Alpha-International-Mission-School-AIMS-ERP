@@ -1,0 +1,200 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f3f6fb;
+    color: #333;
+}
+
+/* Topbar */
+.topbar {
+    background: #123b65;
+    color: white;
+    padding: 20px 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topbar h1 {
+    font-size: 25px;
+}
+
+.topbar p {
+    color: #c5d9ec;
+    margin-top: 5px;
+}
+
+.topbar a {
+    background: #176b87;
+    color: white;
+    text-decoration: none;
+    padding: 11px 18px;
+    border-radius: 6px;
+}
+
+/* Main container */
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.page-heading {
+    margin-bottom: 25px;
+}
+
+.page-heading h2 {
+    color: #123b65;
+    font-size: 27px;
+}
+
+.page-heading p {
+    color: #777;
+    margin-top: 8px;
+}
+
+/* Form card */
+.form-card,
+.table-card {
+    background: white;
+    padding: 28px;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
+    margin-bottom: 25px;
+}
+
+.form-card h2,
+.table-card h2 {
+    color: #123b65;
+    margin-bottom: 25px;
+    font-size: 21px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 9px;
+    color: #444;
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #d5dce5;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #176b87;
+}
+
+#saveStudentBtn {
+    margin-top: 25px;
+    padding: 13px 25px;
+    background: #123b65;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#saveStudentBtn:hover {
+    background: #176b87;
+}
+
+#formMessage {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+/* Student table */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 650px;
+}
+
+thead {
+    background: #123b65;
+    color: white;
+}
+
+th,
+td {
+    padding: 14px;
+    text-align: left;
+    border-bottom: 1px solid #e5e9ef;
+    font-size: 14px;
+}
+
+tbody tr:hover {
+    background: #f5f8fc;
+}
+
+/* Responsive */
+@media (max-width: 650px) {
+    .topbar {
+        padding: 18px;
+        gap: 15px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-card,
+    .table-card {
+        padding: 18px;
+    }
+}
+
+
+#studentPhotoPreviewContainer {
+    margin-top: 12px;
+}
+
+.student-photo-preview,
+#studentPhotoPreview {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+}
+
+.student-record-photo {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.student-no-photo {
+    color: #777;
+    font-size: 12px;
+}

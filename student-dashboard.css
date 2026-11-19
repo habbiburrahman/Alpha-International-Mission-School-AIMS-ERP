@@ -1,0 +1,391 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+}
+
+/* HEADER */
+.header {
+    background: #1e3a8a;
+    color: white;
+    padding: 12px 4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.brand img {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+    background: white;
+    border-radius: 50%;
+    padding: 3px;
+}
+
+.brand h2 {
+    font-size: 25px;
+}
+
+.brand p {
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+.user-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#logoutBtn {
+    background: #dc2626;
+    color: white;
+    border: none;
+    padding: 11px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* MAIN */
+.container {
+    width: 92%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+.welcome {
+    background: white;
+    padding: 28px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    border-left: 6px solid #2563eb;
+}
+
+.welcome h1 {
+    color: #1e3a8a;
+    margin-bottom: 10px;
+}
+
+.welcome p {
+    color: #64748b;
+}
+
+/* PROFILE */
+.profile-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+}
+
+.profile-card h2,
+.dashboard-section h2,
+.fee-summary-section h2 {
+    color: #1e3a8a;
+    margin-bottom: 20px;
+}
+
+.student-profile {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.student-photo-container {
+    width: 150px;
+    height: 170px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #edf2f7;
+    border: 2px solid #dce4ed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#studentPhoto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#noStudentPhoto {
+    color: #64748b;
+    font-size: 13px;
+    text-align: center;
+    padding: 10px;
+}
+
+.profile-details {
+    flex: 1;
+    min-width: 220px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+}
+
+.profile-details p {
+    background: #eff6ff;
+    padding: 14px;
+    border-radius: 7px;
+}
+
+/* FEE SUMMARY */
+.fee-summary-section {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+}
+
+.fee-summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 18px;
+}
+
+.fee-summary-card {
+    padding: 22px;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    background: #f8fafc;
+}
+
+.fee-summary-card h3 {
+    font-size: 15px;
+    color: #64748b;
+    margin-bottom: 14px;
+}
+
+.fee-summary-card p {
+    font-size: 25px;
+    font-weight: bold;
+    overflow-wrap: anywhere;
+}
+
+.total-card p {
+    color: #1e40af;
+}
+
+.paid-card p {
+    color: #15803d;
+}
+
+.due-card p {
+    color: #dc2626;
+}
+
+.status-card p {
+    color: #1e3a8a;
+    font-size: 19px;
+}
+
+.fee-invoice-heading {
+    margin: 30px 0 15px;
+    color: #1e3a8a;
+    font-size: 19px;
+}
+
+.fee-table-container {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+}
+
+.fee-table {
+    width: 100%;
+    min-width: 750px;
+    border-collapse: collapse;
+}
+
+.fee-table th,
+.fee-table td {
+    padding: 14px;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 14px;
+}
+
+.fee-table th {
+    background: #1e3a8a;
+    color: white;
+}
+
+.fee-table tbody tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+.fee-status {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.fee-status.paid {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.fee-status.pending,
+.fee-status.partially_paid,
+.fee-status.overdue {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.fee-status.cancelled {
+    background: #e2e8f0;
+    color: #475569;
+}
+
+.fee-message {
+    margin-top: 15px;
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* ACADEMIC DASHBOARD */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.dashboard-card {
+    display: block;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #1e293b;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.04);
+    transition: 0.2s;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-4px);
+    border-color: #2563eb;
+}
+
+.dashboard-card h3 {
+    color: #1e40af;
+    margin-bottom: 12px;
+}
+
+.dashboard-card p {
+    color: #64748b;
+    margin-bottom: 18px;
+    line-height: 1.5;
+}
+
+.dashboard-card span {
+    color: #2563eb;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.coming-soon span {
+    color: #d97706;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 22px;
+    background: #1e3a8a;
+    color: white;
+    margin-top: 40px;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .header {
+        padding: 12px 5%;
+    }
+
+    .brand img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .brand h2 {
+        font-size: 22px;
+    }
+
+    .container {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    .welcome,
+    .profile-card,
+    .fee-summary-section {
+        padding: 18px;
+    }
+
+    .student-profile {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .student-photo-container {
+        width: 130px;
+        height: 150px;
+    }
+
+    .profile-details {
+        width: 100%;
+        min-width: 0;
+        grid-template-columns: 1fr;
+    }
+
+    .fee-summary-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .fee-summary-card {
+        padding: 15px;
+    }
+
+    .fee-summary-card p {
+        font-size: 20px;
+    }
+
+    .user-area {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 380px) {
+    .fee-summary-grid {
+        grid-template-columns: 1fr;
+    }
+}

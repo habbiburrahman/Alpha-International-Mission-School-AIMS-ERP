@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timetable Management | AIMS</title>
+
+    <link rel="stylesheet" href="admin-timetable.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+
+<body>
+
+    <header class="header">
+        <div>
+            <h1>AIMS Admin Portal</h1>
+            <p>Timetable Management</p>
+        </div>
+
+        <a href="dashboard.html" class="back-btn">
+            Back to Dashboard
+        </a>
+    </header>
+
+    <main class="container">
+
+        <!-- TIMETABLE FORM -->
+        <section class="form-card">
+
+            <h2 id="formHeading">Create Class Timetable</h2>
+
+            <form id="timetableForm">
+
+                <input type="hidden" id="timetableId">
+
+                <div class="form-grid">
+
+                    <div>
+                        <label for="classSelect">Class</label>
+                        <select id="classSelect" required>
+                            <option value="">Select Class</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="sectionSelect">Section</label>
+                        <select id="sectionSelect" required disabled>
+                            <option value="">Select Section</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="subjectSelect">Subject</label>
+                        <select id="subjectSelect" required>
+                            <option value="">Select Subject</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="teacherSelect">Teacher</label>
+                        <select id="teacherSelect" required>
+                            <option value="">Select Teacher</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="daySelect">Day</label>
+                        <select id="daySelect" required>
+                            <option value="">Select Day</option>
+                            <option value="Monday">Monday</option>
+                            <option value="Tuesday">Tuesday</option>
+                            <option value="Wednesday">Wednesday</option>
+                            <option value="Thursday">Thursday</option>
+                            <option value="Friday">Friday</option>
+                            <option value="Saturday">Saturday</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="periodNumber">Period Number</label>
+                        <input
+                            type="number"
+                            id="periodNumber"
+                            min="1"
+                            max="12"
+                            placeholder="Example: 1"
+                            required
+                        >
+                    </div>
+
+                    <div>
+                        <label for="startTime">Start Time</label>
+                        <input type="time" id="startTime" required>
+                    </div>
+
+                    <div>
+                        <label for="endTime">End Time</label>
+                        <input type="time" id="endTime" required>
+                    </div>
+
+                </div>
+
+                <div class="form-buttons">
+                    <button type="submit" id="saveBtn">
+                        Save Timetable
+                    </button>
+
+                    <button type="button" id="cancelBtn" hidden>
+                        Cancel Edit
+                    </button>
+                </div>
+
+            </form>
+
+            <p id="statusMessage"></p>
+
+        </section>
+
+        <!-- TIMETABLE LIST -->
+        <section class="table-card">
+
+            <h2>Class Timetable Records</h2>
+
+            <div class="filter-box">
+
+                <div>
+                    <label for="filterClass">Filter Class</label>
+                    <select id="filterClass">
+                        <option value="">All Classes</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="filterDay">Filter Day</label>
+                    <select id="filterDay">
+                        <option value="">All Days</option>
+                        <option value="Monday">Monday</option>
+                        <option value="Tuesday">Tuesday</option>
+                        <option value="Wednesday">Wednesday</option>
+                        <option value="Thursday">Thursday</option>
+                        <option value="Friday">Friday</option>
+                        <option value="Saturday">Saturday</option>
+                    </select>
+                </div>
+
+                <button type="button" id="filterBtn">
+                    Apply Filter
+                </button>
+
+            </div>
+
+            <div class="table-wrapper">
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Class</th>
+                            <th>Section</th>
+                            <th>Day</th>
+                            <th>Period</th>
+                            <th>Subject</th>
+                            <th>Teacher</th>
+                            <th>Time</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="timetableTable">
+                        <tr>
+                            <td colspan="8">Loading timetable...</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="admin-timetable.js"></script>
+
+</body>
+</html>

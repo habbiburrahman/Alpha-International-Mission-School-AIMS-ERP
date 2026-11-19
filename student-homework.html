@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AIMS - Student Homework</title>
+
+    <link rel="stylesheet" href="student-homework.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+
+<body>
+
+    <header class="header">
+        <div>
+            <h1>AIMS ERP</h1>
+            <p>Student Homework Portal</p>
+        </div>
+
+        <a href="dashboard.html" class="back-btn">Dashboard</a>
+    </header>
+
+    <main class="container">
+
+        <section class="welcome">
+            <h2>Homework Submission</h2>
+            <p>View your assigned homework and submit your PDF files.</p>
+        </section>
+
+        <!-- Assigned Homework -->
+        <section class="homework-section">
+
+            <h3>Assigned Homework</h3>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Homework</th>
+                            <th>Description</th>
+                            <th>Due Date</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="homeworkTable">
+                        <tr>
+                            <td colspan="4">Loading homework...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+        <!-- Submit Homework -->
+        <section class="upload-section">
+
+            <h3>Submit Homework PDF</h3>
+
+            <form id="submissionForm">
+
+                <label for="selectedHomework">Selected Homework</label>
+
+                <input
+                    type="text"
+                    id="selectedHomework"
+                    readonly
+                    placeholder="Select homework from the list"
+                >
+
+                <input type="hidden" id="homeworkId">
+
+                <label for="pdfFile">Choose PDF File</label>
+
+                <input
+                    type="file"
+                    id="pdfFile"
+                    accept=".pdf,application/pdf"
+                    required
+                >
+
+                <p class="file-note">
+                    Only PDF files are allowed. Maximum size: 5 MB.
+                </p>
+
+                <label for="submissionText">Message (Optional)</label>
+
+                <textarea
+                    id="submissionText"
+                    rows="4"
+                    placeholder="Write a short message..."
+                ></textarea>
+
+                <button type="submit" id="submitBtn">
+                    Submit Homework
+                </button>
+
+            </form>
+
+            <p id="message"></p>
+
+        </section>
+
+        <!-- Submission History -->
+        <section class="history-section">
+
+            <h3>My Submission History</h3>
+
+            <p>Check your previous homework submissions and their status.</p>
+
+            <div class="table-wrapper">
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Homework</th>
+                            <th>Submission Date</th>
+                            <th>Message</th>
+                            <th>PDF</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="historyTable">
+                        <tr>
+                            <td colspan="5">Loading submission history...</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="student-homework.js"></script>
+
+</body>
+</html>

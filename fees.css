@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f2f5fa;
+    color: #263238;
+}
+
+.container {
+    width: 95%;
+    max-width: 1300px;
+    margin: 30px auto;
+}
+
+header {
+    background: #173b70;
+    color: white;
+    padding: 22px 25px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+header h1 {
+    font-size: 25px;
+    margin-bottom: 6px;
+}
+
+header p {
+    color: #dce8f8;
+}
+
+.back-btn {
+    background: white;
+    color: #173b70;
+    padding: 11px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    background: white;
+    margin-top: 25px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+main > h2 {
+    color: #173b70;
+    margin-bottom: 22px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 18px;
+}
+
+.stat-card {
+    padding: 25px 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+.stat-card h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.stat-card p {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.total {
+    background: #345b91;
+}
+
+.paid {
+    background: #219653;
+}
+
+.pending {
+    background: #d94343;
+}
+
+.partial {
+    background: #e49a20;
+}
+
+.actions {
+    margin-top: 35px;
+}
+
+.actions h2,
+.invoice-section h2 {
+    color: #173b70;
+    margin-bottom: 18px;
+}
+
+.action-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+}
+
+.action-card {
+    display: block;
+    padding: 22px;
+    background: #f0f5fc;
+    border: 1px solid #dce6f3;
+    border-radius: 9px;
+    text-decoration: none;
+    color: #263238;
+    transition: 0.2s;
+}
+
+.action-card:hover {
+    background: #e3edfa;
+    transform: translateY(-3px);
+}
+
+.action-card h3 {
+    color: #1769aa;
+    margin-bottom: 10px;
+}
+
+.action-card p {
+    font-size: 14px;
+    color: #687586;
+}
+
+.invoice-section {
+    margin-top: 35px;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 750px;
+}
+
+th,
+td {
+    padding: 13px 12px;
+    border-bottom: 1px solid #e5e9ef;
+    text-align: left;
+    font-size: 14px;
+}
+
+th {
+    background: #eaf1fa;
+    color: #173b70;
+}
+
+tbody tr:hover {
+    background: #f7faff;
+}
+
+#message {
+    margin-top: 18px;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    main {
+        padding: 15px;
+    }
+}

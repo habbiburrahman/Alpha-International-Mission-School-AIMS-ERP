@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notice Management | AIMS</title>
+    <link rel="stylesheet" href="admin-notices.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+
+    <header class="header">
+
+        
+
+        <div>
+            <h1>AIMS Admin Portal</h1>
+            <p>Notice Management</p>
+        </div>
+        <a href="admin-dashboard.html" class="back-btn">Back to Dashboard</a>
+    </header>
+
+    <main class="container">
+
+        <section class="form-card">
+            <h2 id="formHeading">Create New Notice</h2>
+
+            <form id="noticeForm">
+                <input type="hidden" id="noticeId">
+
+                <label for="title">Notice Title</label>
+                <input type="text" id="title" placeholder="Enter notice title" required>
+
+                <label for="message">Notice Message</label>
+                <textarea id="message" rows="6" placeholder="Write your notice here..." required></textarea>
+
+                <label for="audience">Notice Audience</label>
+                <select id="audience" required>
+                    <option value="all">Everyone</option>
+                    <option value="students">Students</option>
+                    <option value="teachers">Teachers</option>
+                </select>
+
+                <label class="publish-option">
+                    <input type="checkbox" id="isPublished" checked>
+                    Publish Notice
+                </label>
+
+                <div class="form-buttons">
+                    <button type="submit" id="saveBtn">Save Notice</button>
+                    <button type="button" id="cancelBtn" hidden>Cancel Edit</button>
+                </div>
+            </form>
+
+            <p id="statusMessage"></p>
+        </section>
+
+        <section class="table-card">
+            <h2>All Notices</h2>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Audience</th>
+                            <th>Status</th>
+                            <th>Created Date</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="noticesTable">
+                        <tr>
+                            <td colspan="5">Loading notices...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="supabase-config.js"></script>
+    <script src="admin-notices.js"></script>
+
+</body>
+</html>

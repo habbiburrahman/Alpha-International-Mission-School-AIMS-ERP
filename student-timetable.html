@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Timetable | AIMS</title>
+    <link rel="stylesheet" href="student-timetable.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="brand">
+        <img src="logo.jpg" alt="AIMS Logo">
+        <div>
+            <h2>AIMS</h2>
+            <p>Student & Parent Portal</p>
+        </div>
+    </div>
+
+    <a href="student-dashboard.html">Back to Dashboard</a>
+</header>
+
+<main class="container">
+
+    <h1>Class Timetable</h1>
+    <p class="subtitle">View your weekly class schedule.</p>
+
+    <section class="student-info">
+        <div>
+            <span>Class</span>
+            <strong id="studentClass">--</strong>
+        </div>
+
+        <div>
+            <span>Section</span>
+            <strong id="studentSection">--</strong>
+        </div>
+    </section>
+
+    <section class="timetable-section">
+        <h2>Weekly Schedule</h2>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>Period</th>
+                        <th>Time</th>
+                        <th>Subject</th>
+                        <th>Teacher</th>
+                    </tr>
+                </thead>
+
+                <tbody id="timetableBody">
+                    <tr>
+                        <td colspan="5">Loading timetable...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    © Alpha International Mission School | AIMS
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="student-timetable.js"></script>
+
+</body>
+</html>
